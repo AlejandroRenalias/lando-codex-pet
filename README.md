@@ -9,7 +9,7 @@ Lando is a custom animated Codex pet based on my own black poodle with a curly t
 1. Download [the pet package](outputs/lando-pet.zip).
 2. Extract it and copy the `lando` folder into your Codex pets directory:
    - Windows: `%USERPROFILE%\\.codex\\pets\\lando`
-3. In Codex, open **Settings → Pets**, choose **Refresh**, select **Lando**, then enter `/pet` to wake him.
+3. In Codex, open Settings → Pets, choose Refresh, select Lando, then enter `/pet` to wake him.
 
 ## Included files
 
