@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meet Lando</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#262b2b;background:#f5f1e9}*{box-sizing:border-box}body{margin:0;padding:36px 20px}main{max-width:760px;margin:auto}header{display:flex;align-items:center;justify-content:space-between;gap:20px}h1{font-size:48px;letter-spacing:-2px;margin:0}p{color:#69706d;line-height:1.6}.stage{margin:28px 0 22px;min-height:350px;border:1px solid #dadcd1;border-radius:28px;display:grid;place-items:center;background:#e6ecdf;position:relative;overflow:hidden}.stage.dark{background:#28332f}.pet{width:192px;height:208px;background-image:url('lando/spritesheet.webp');background-repeat:no-repeat;image-rendering:auto}.status{position:absolute;bottom:16px;font-size:13px;color:#647361}.dark .status{color:#c5d4bf}.controls{display:flex;flex-wrap:wrap;gap:8px}button{font:inherit;font-size:14px;cursor:pointer;padding:10px 15px;background:#fffdf7;border:1px solid #d5d9cf;border-radius:100px;color:inherit}button[aria-pressed=true]{background:#294c3e;color:white;border-color:#294c3e}button:hover{border-color:#507761}button:focus-visible{outline:3px solid #90b8a2;outline-offset:3px}footer{margin-top:25px;font-size:13px;color:#798079}a{color:#355c48}.intro{max-width:510px}#theme{white-space:nowrap}.error{display:none;color:#983a31;text-align:center;padding:20px}
+</style>
+<main><header><h1>Meet Lando.</h1><button id="theme">Dark backdrop</button></header>
+<p class="intro">Black curls, warm brown eyes, and a little curiosity. Try his animations, or choose <b>Look around</b> and move your pointer.</p>
+<div class="stage" id="stage"><div id="pet" class="pet" role="img" aria-label="Animated black poodle Lando"></div><span class="status" id="status">Taking it easy</span><p class="error" id="error">Keep this preview beside the lando folder so it can find the pet artwork.</p></div>
+<nav class="controls" aria-label="Lando animations" id="controls"></nav>
+<footer>Made from three photographs of Lando. <a href="lando/pet.json">Pet manifest</a> · <a href="lando/spritesheet.webp">Animation artwork</a></footer></main>
+<script>
+const states=[['Idle',0,[280,110,110,140,140,320],'Taking it easy'],['Run right',1,[120,120,120,120,120,120,120,220],'On the move'],['Run left',2,[120,120,120,120,120,120,120,220],'On the move'],['Wave',3,[140,140,140,280],'Hello there'],['Jump',4,[140,140,140,140,280],'A little leap'],['Sad',5,[140,140,140,140,140,140,140,240],'A little disappointed'],['Waiting',6,[150,150,150,150,150,260],'Waiting for you'],['Thinking',7,[120,120,120,120,120,220],'Working it out'],['Review',8,[150,150,150,150,150,280],'Taking a closer look'],['Look around',9,[],'Move your pointer around Lando']];
+const pet=document.getElementById('pet'),stage=document.getElementById('stage'),status=document.getElementById('status'),controls=document.getElementById('controls');let selected=0,frame=0,timer;
+function show(row,col){pet.style.backgroundPosition=`${-col*192}px ${-row*208}px`}
+function tick(){const s=states[selected];show(s[1],frame);timer=setTimeout(()=>{frame=(frame+1)%s[2].length;tick()},s[2][frame])}
+function choose(i){clearTimeout(timer);selected=i;frame=0;[...controls.children].forEach((b,j)=>b.setAttribute('aria-pressed',String(i===j)));status.textContent=states[i][3];if(i===9)show(0,6);else tick()}
+states.forEach((s,i)=>{const b=document.createElement('button');b.textContent=s[0];b.onclick=()=>choose(i);controls.append(b)});
+stage.addEventListener('pointermove',e=>{if(selected!==9)return;const r=pet.getBoundingClientRect(),x=e.clientX-(r.left+r.width/2),y=e.clientY-(r.top+r.height/2);if(Math.hypot(x,y)<35){show(0,6);return}const degree=(Math.atan2(x,-y)*180/Math.PI+360)%360;const index=Math.round(degree/22.5)%16;show(9+Math.floor(index/8),index%8)});
+stage.addEventListener('pointerleave',()=>{if(selected===9)show(0,6)});
+document.getElementById('theme').onclick=e=>{const dark=stage.classList.toggle('dark');e.target.textContent=dark?'Light backdrop':'Dark backdrop'};
+const atlas=new Image();atlas.onerror=()=>{document.getElementById('error').style.display='block';pet.style.display='none';status.style.display='none'};atlas.src='lando/spritesheet.webp';choose(0);
+</script></html>

@@ -1,0 +1,8 @@
+# Pet-generation working material and local tooling
+work/
+.codex/
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/

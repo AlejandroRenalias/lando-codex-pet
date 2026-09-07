@@ -1,0 +1,124 @@
+{
+  "ok": true,
+  "reviewed_by": "independent final_visual_qa",
+  "visual_qa": "pass",
+  "directions": [
+    {
+      "degree": "000",
+      "verdict": "pass",
+      "expected": "up",
+      "observed": "vertical up; horizontal centered",
+      "reason": "Unambiguous centered upward cardinal with symmetric face and raised gaze."
+    },
+    {
+      "degree": "022.5",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "horizontal screen-right; vertical up",
+      "reason": "Muzzle and visible eye shift slightly right while the head remains pitched upward."
+    },
+    {
+      "degree": "045",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "horizontal screen-right; vertical up",
+      "reason": "Clear diagonal: rightward muzzle profile with upward head angle."
+    },
+    {
+      "degree": "067.5",
+      "verdict": "pass",
+      "expected": "up-right",
+      "observed": "horizontal screen-right; vertical up",
+      "reason": "Near-right profile retains an upward muzzle and eye line."
+    },
+    {
+      "degree": "090",
+      "verdict": "pass",
+      "expected": "right",
+      "observed": "horizontal screen-right; vertical level",
+      "reason": "Unambiguous right-facing profile cardinal."
+    },
+    {
+      "degree": "112.5",
+      "verdict": "pass",
+      "expected": "down-right",
+      "observed": "horizontal screen-right; vertical down",
+      "reason": "Right profile is maintained while muzzle and eye line angle downward."
+    },
+    {
+      "degree": "135",
+      "verdict": "pass",
+      "expected": "down-right",
+      "observed": "horizontal screen-right; vertical down",
+      "reason": "Front-quarter pose clearly combines rightward head turn with downward gaze."
+    },
+    {
+      "degree": "157.5",
+      "verdict": "pass",
+      "expected": "down-right",
+      "observed": "horizontal slight screen-right; vertical down",
+      "reason": "Near-down pose preserves the rightward facial bias and lowered muzzle."
+    },
+    {
+      "degree": "180",
+      "verdict": "pass",
+      "expected": "down",
+      "observed": "vertical down; horizontal centered",
+      "reason": "Unambiguous centered downward cardinal with symmetric body presentation."
+    },
+    {
+      "degree": "202.5",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "horizontal screen-left; vertical down",
+      "reason": "Leftward muzzle profile combines with a downward head angle."
+    },
+    {
+      "degree": "225",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "horizontal screen-left; vertical down",
+      "reason": "Clear left/down diagonal with consistent silhouette and gaze."
+    },
+    {
+      "degree": "247.5",
+      "verdict": "pass",
+      "expected": "down-left",
+      "observed": "horizontal screen-left; vertical down",
+      "reason": "Near-left profile retains the downward muzzle and eye line."
+    },
+    {
+      "degree": "270",
+      "verdict": "pass",
+      "expected": "left",
+      "observed": "horizontal screen-left; vertical level",
+      "reason": "Unambiguous left-facing profile cardinal."
+    },
+    {
+      "degree": "292.5",
+      "verdict": "pass",
+      "expected": "up-left",
+      "observed": "horizontal screen-left; vertical up",
+      "reason": "Left profile is maintained while the muzzle and gaze angle upward."
+    },
+    {
+      "degree": "315",
+      "verdict": "pass",
+      "expected": "up-left",
+      "observed": "horizontal screen-left; vertical up",
+      "reason": "Clear left/up diagonal with smooth progression from the left cardinal."
+    },
+    {
+      "degree": "337.5",
+      "verdict": "pass",
+      "expected": "up-left",
+      "observed": "horizontal slight screen-left; vertical up",
+      "reason": "Near-up pose preserves the leftward facial bias and raised muzzle."
+    }
+  ],
+  "accepted_warnings": [
+    "Continuity metrics at 090 to112.5 and135 to157.5 are metric-only; ordered loop has no visible snap, reversal, scale pop or identity change."
+  ],
+  "standard_animations": "All nine states and GIF previews passed: stable identity, complete bodies, appropriate state motion, no detached fragments.",
+  "repair_rows": []
+}
