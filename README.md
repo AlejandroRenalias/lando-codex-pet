@@ -4,7 +4,7 @@ Lando is a custom animated Codex pet based on my own black poodle with a curly t
 
 <p align="center">
   <img src="outputs/lando-wave.gif" alt="Lando waving">
-  <img src="outputs/lando-failed.gif" alt="Lando's failed reaction">
+  <img src="outputs/lando-lying-down.png" alt="Lando lying down">
   <img src="outputs/lando-look-around.gif" alt="Lando looking around">
 </p>
 
@@ -19,7 +19,7 @@ Lando is a custom animated Codex pet based on my own black poodle with a curly t
 
 - `outputs/lando/` — the installable v2 pet (`pet.json` and `spritesheet.webp`)
 - `outputs/lando-pet.zip` — ready-to-download installation package
-- `outputs/lando-failed.gif` and `outputs/lando-look-around.gif` — animation previews
+- `outputs/lando-lying-down.png` and `outputs/lando-look-around.gif` — pose and animation previews
 - `outputs/lando-preview.html` — an interactive local animation preview
 - `outputs/lando-animations.png` — animation contact sheet
 - `outputs/lando-creation-notes.md` — source, art direction, and animation notes
