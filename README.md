@@ -1,6 +1,6 @@
-# Lando — Codex Pet
+# Lando - Codex Pet
 
-Lando is a custom animated Codex pet based on a black poodle with a curly topknot, floppy ears, warm brown eyes, and a lightly silvered muzzle.
+Lando is a custom animated Codex pet based on my own black poodle with a curly topknot, floppy ears and warm brown eyes.
 
 ![Lando waving](outputs/lando-wave.gif)
 
@@ -26,4 +26,4 @@ Lando uses Codex pet sprite format v2: a transparent 8 × 11 spritesheet with ni
 
 ## Personal project
 
-Lando’s likeness, reference photos, and resulting character artwork are personal to the project owner. No license is granted for reuse, redistribution, or commercial use without permission.
+Lando’s likeness, reference photos, and resulting character artwork are personal to me. No license is granted for reuse, redistribution, or commercial use without permission.
