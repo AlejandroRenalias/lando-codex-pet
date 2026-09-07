@@ -2,13 +2,18 @@
 
 Lando is a custom animated Codex pet based on my own black poodle with a curly topknot, floppy ears and warm brown eyes.
 
-![Lando waving](outputs/lando-wave.gif)
-
-Lando can also run and jump:
-
-![Lando running](outputs/lando-running.gif)
-
-![Lando jumping](outputs/lando-jumping.gif)
+<table>
+  <tr>
+    <td align="center"><img src="outputs/lando-wave.gif" alt="Lando waving"></td>
+    <td align="center"><img src="outputs/lando-waiting.gif" alt="Lando waiting calmly"></td>
+    <td align="center"><img src="outputs/lando-reviewing.gif" alt="Lando reviewing"></td>
+  </tr>
+  <tr>
+    <td align="center">Waving</td>
+    <td align="center">Waiting</td>
+    <td align="center">Reviewing</td>
+  </tr>
+</table>
 
 ## Install
 
@@ -21,7 +26,7 @@ Lando can also run and jump:
 
 - `outputs/lando/` — the installable v2 pet (`pet.json` and `spritesheet.webp`)
 - `outputs/lando-pet.zip` — ready-to-download installation package
-- `outputs/lando-running.gif` and `outputs/lando-jumping.gif` — animation previews
+- `outputs/lando-waiting.gif` and `outputs/lando-reviewing.gif` — calm animation previews
 - `outputs/lando-preview.html` — an interactive local animation preview
 - `outputs/lando-animations.png` — animation contact sheet
 - `outputs/lando-creation-notes.md` — source, art direction, and animation notes
